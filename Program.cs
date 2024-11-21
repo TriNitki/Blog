@@ -88,6 +88,8 @@ class Program
                 new BlogComment("9", new DateTime(2020, 2, 14), "Petr"),
             }
         });
+        context.BlogPosts.Add(new BlogPost("Post4"));
+
         context.SaveChanges();
     }
 }

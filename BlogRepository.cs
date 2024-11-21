@@ -34,6 +34,7 @@ public class BlogRepository : IBlogRepository
     {
         return _dbContext.BlogPosts
             .Include(x => x.Comments)
+            .Where(x => x.Comments.Count > 0)
             .Select(post => new
             {
                 post.Title,
